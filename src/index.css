@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Geom';
+  src: url('/fonts/Geom/Geom-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geom';
+  src: url('/fonts/Geom/Geom-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-light text-brand-dark antialiased tracking-tighter font-sans;
+    font-size: 20px;
+    zoom: 90%;
+  }
+  
+  button {
+    font-size: 16px;
+  }
+}
+
+@layer utilities {
+  .font-geom {
+    font-family: 'Geom', sans-serif !important;
+    letter-spacing: normal !important;
+    font-kerning: none !important;
+  }
+}
