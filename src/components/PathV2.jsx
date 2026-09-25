@@ -76,6 +76,37 @@ const PathV2 = () => {
     offset: ["start 250px", "end end"]
   });
 
+  // Dynamic Scale calculation for large screens
+  const [scale, setScale] = useState(1);
+  
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        // Width scale to try and touch exactly the right side of the user's screen
+        const widthScale = (window.innerWidth - 140) / 1300;
+        
+        // Precise height scale that mathematically guarantees AT LEAST 40px of padding
+        // from both the top and bottom of the viewport so it NEVER sticks to the edges!
+        const maxHeightScale = (window.innerHeight - 80) / 650;
+        
+        // Use the smaller scale so it perfectly balances both constraints
+        let newScale = Math.min(widthScale, maxHeightScale);
+        
+        // Cap it so it doesn't get ridiculously massive on ultrawides, but allow it to shrink
+        // as much as needed cohesively on small laptops/tablets.
+        if (newScale > 2.2) newScale = 2.2;
+        
+        setScale(newScale);
+      } else {
+        setScale(1);
+      }
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Map scroll progress to the exact path length percentages based on dot positions on the extended circular arc
   const lineProgress = useTransform(
     scrollYProgress, 
@@ -104,7 +135,7 @@ const PathV2 = () => {
         <div className="w-full px-[70px] pt-[150px] pb-[180px]">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             {/* LEFT COLUMN: Eyebrow + Heading */}
-            <div className="w-full lg:w-[504px] shrink-0 mb-12 lg:mb-0 lg:pr-12">
+            <div className="w-full lg:w-[48%] shrink-0 mb-12 lg:mb-0 lg:pr-8">
               <div className="flex items-center gap-[14px] mb-8">
                 <div className="w-[22px] h-[2px] bg-[#6c7280]"></div>
                 <span className="text-[14px] md:text-[16px] font-geom font-normal text-[#6c7280] uppercase tracking-wide">
@@ -116,9 +147,9 @@ const PathV2 = () => {
               </h2>
             </div>
             
-            {/* RIGHT COLUMN: Support Text */}
-            <div className="w-full lg:max-w-[728px] shrink-0">
-              <p className="text-[18px] md:text-[20px] text-[#10131b] font-sans font-normal leading-[1.45] tracking-[-1px]">
+            {/* RIGHT COLUMN: Support Text. Added mt-[56px] to offset the eyebrow height so it centers exactly with the H2 heading */}
+            <div className="w-full lg:w-[48%] shrink-0 lg:mt-[56px]">
+              <p className="text-[18px] md:text-[20px] text-[#10131b] font-sans font-normal leading-[1.45] tracking-[-1px] max-w-[728px] lg:ml-auto">
                 Our approach is built on collaboration, innovation and technical excellence. We integrate design thinking with engineering intelligence and construction expertise to deliver solutions that create lasting impact.
               </p>
             </div>
@@ -129,11 +160,22 @@ const PathV2 = () => {
         <div ref={containerRef} className="w-full h-[400vh] relative z-10">
           
           {/* Sticky wrapper with explicit padding from top and bottom so it never sticks to the edges! */}
-          <div className="sticky top-[100px] w-full h-[calc(100vh-200px)] flex items-center justify-center bg-white z-0 rounded-[20px]">
+          <div 
+            className="sticky top-[100px] w-full h-[calc(100vh-200px)] flex items-center justify-start bg-white z-0 rounded-[20px]"
+            style={{ overflowX: 'clip', overflowY: 'visible' }}
+          >
             
-            {/* Centered Layout Container. Max-width 1440px ensures it perfectly matches header on standard screens, 
-                and elegantly centers itself on massive ultra-wide monitors to balance empty space. */}
-            <div className="relative w-full max-w-[1440px] mx-auto h-[750px] shrink-0">
+            {/* Layout Container. Fixed to 1370px (exact width of the content) so it perfectly scales to the margin without overflowing!
+                Height increased to 820px to perfectly balance the visual weight so it doesn't look bottom-heavy.
+                Added mt-[60px] to manually shift the entire graphic downwards so the top padding feels visually balanced and not stuck to the top.
+                transformOrigin is left at 70px so it remains PERFECTLY left-aligned with the 70px header padding! */}
+            <div 
+              className="relative w-[1370px] h-[820px] shrink-0 mt-[60px]"
+              style={{
+                transform: `scale(${scale})`,
+                transformOrigin: '70px center'
+              }}
+            >
               
               {/* Subtle Ambient Background Glow for depth */}
               <motion.div 
@@ -186,12 +228,13 @@ const PathV2 = () => {
 
               {/* Nodes mathematically positioned to perfectly track the curve while avoiding all overlaps */}
               {pathCards.map((card, index) => {
-                // Highly optimized coordinates for perfect staggered layout and guaranteed vertical clearances
+                // Highly optimized coordinates for perfect staggered layout and guaranteed vertical clearances.
+                // Gap between letter and body has been slightly reduced per request.
                 const coords = [
-                  { dot: {x: 403, y: 120}, letter: {x: 483, y: 88}, body: {x: 563, y: 98} }, // P
-                  { dot: {x: 532, y: 290}, letter: {x: 612, y: 258}, body: {x: 692, y: 268} }, // A
-                  { dot: {x: 532, y: 460}, letter: {x: 612, y: 428}, body: {x: 692, y: 438} }, // T
-                  { dot: {x: 403, y: 630}, letter: {x: 483, y: 598}, body: {x: 563, y: 608} } // H
+                  { dot: {x: 403, y: 120}, letter: {x: 513, y: 88}, body: {x: 603, y: 98} }, // P
+                  { dot: {x: 532, y: 290}, letter: {x: 642, y: 258}, body: {x: 732, y: 268} }, // A
+                  { dot: {x: 532, y: 460}, letter: {x: 642, y: 428}, body: {x: 732, y: 438} }, // T
+                  { dot: {x: 403, y: 630}, letter: {x: 513, y: 598}, body: {x: 603, y: 608} } // H
                 ];
                 
                 const pos = coords[index];
@@ -219,7 +262,7 @@ const PathV2 = () => {
                         Font size reduced to 18px (as requested) allowing the whole block to be shorter and fit flawlessly. */}
                     <div 
                       className={`absolute text-[18px] leading-[1.5] tracking-[-0.5px] font-sans transition-all duration-700 ease-out z-20 ${isActive ? 'text-[#0D1775] opacity-100 translate-y-0' : 'text-[#9CA3AF] opacity-40 translate-y-4'}`}
-                      style={{ left: `${pos.body.x}px`, top: `${pos.body.y}px`, right: '70px', maxWidth: '750px' }}
+                      style={{ left: `${pos.body.x}px`, top: `${pos.body.y}px`, right: '0px', maxWidth: '750px' }}
                     >
                        <span className={`font-bold block mb-2 text-[20px] transition-colors duration-700 ${isActive ? 'text-[#0D1775]' : 'text-[#9CA3AF]'}`}>{card.title}</span>
                        <span className={`transition-colors duration-700 block ${isActive ? 'text-[#0D1775] opacity-90' : 'text-[#9CA3AF] opacity-100'}`}>{card.desc}</span>
@@ -233,6 +276,48 @@ const PathV2 = () => {
 
         {/* Spacer to ensure generous padding before the next section arrives */}
         <div className="w-full h-[200px] bg-white relative z-0"></div>
+      </section>
+
+      {/* MOBILE VERSION (Vertical Stack) */}
+      <section className="lg:hidden w-full bg-[#f9f9fd] relative px-5 pt-20 pb-20">
+        
+        {/* Header */}
+        <div className="mb-16">
+          <div className="flex items-center gap-[14px] mb-8">
+            <div className="w-[22px] h-[2px] bg-[#6c7280]"></div>
+            <span className="text-[16px] font-geom font-normal text-[#6c7280] uppercase tracking-[-1px]">
+              Our Approach
+            </span>
+          </div>
+          <h2 className="text-4xl leading-[1.1] text-[#10131b] font-geom tracking-[-2px] mb-8">
+            A collaborative approach. Intelligent outcomes.
+          </h2>
+          <p className="text-[18px] text-[#10131b] font-sans font-normal leading-[1.45] tracking-[-1px]">
+            Our approach is built on collaboration, innovation and technical excellence. We integrate design thinking with engineering intelligence and construction expertise to deliver solutions that create lasting impact.
+          </p>
+        </div>
+
+        {/* Vertical Timeline Cards */}
+        <div className="flex flex-col gap-12 relative pl-2">
+          {/* Vertical Track Line */}
+          <div className="absolute left-[26px] top-[24px] bottom-[24px] w-[2px] bg-gray-200"></div>
+          
+          {pathCards.map((card, idx) => (
+            <div key={card.letter} className="relative flex gap-6 z-10">
+              {/* Timeline Node */}
+              <div className="w-[28px] h-[28px] rounded-full bg-white flex items-center justify-center ring-[3px] ring-white shadow-sm shrink-0 mt-1 relative z-20" style={{ marginLeft: '12px' }}>
+                <div className="w-[14px] h-[14px] rounded-full bg-[#0D1775]"></div>
+              </div>
+              
+              {/* Card Content */}
+              <div className="flex flex-col pt-0">
+                <div className="text-[48px] font-sans font-bold text-[#0D1775] leading-none tracking-[-2px] mb-2">{card.letter}</div>
+                <h3 className="text-[20px] font-bold text-[#0D1775] font-geom tracking-tight mb-2">{card.title}</h3>
+                <p className="text-[16px] text-gray-500 leading-[1.5] font-sans pr-2">{card.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
