@@ -42,7 +42,7 @@ const LatestNews = () => {
           >
             <div className="px-6 flex flex-col gap-[37px]">
               <div className="flex flex-col gap-[14px]">
-                <h3 className="text-[20px] leading-[1.2] tracking-tighter text-[#1b1b1b] font-geom font-normal transition-colors duration-300 group-hover:text-[#0D1775]">
+                <h3 className="text-[20px] leading-[1.2] tracking-tighter text-[#1b1b1b] font-sans font-normal transition-colors duration-300 group-hover:text-[#0D1775]">
                   Sustainable Future:<br />Award-Winning Eco-Tower<br />Design Released.
                 </h3>
                 <div className="w-[125px] h-[1.5px] bg-[#0D1775] origin-left transition-transform duration-500 group-hover:scale-x-110"></div>
@@ -66,7 +66,7 @@ const LatestNews = () => {
           >
             <div className="px-6 flex flex-col gap-[37px]">
               <div className="flex flex-col gap-[14px]">
-                <h3 className="text-[20px] leading-[1.2] tracking-tighter text-[#1b1b1b] font-geom font-normal transition-colors duration-300 group-hover:text-[#D75E1D]">
+                <h3 className="text-[20px] leading-[1.2] tracking-tighter text-[#1b1b1b] font-sans font-normal transition-colors duration-300 group-hover:text-[#D75E1D]">
                   Infrastructure Focus:<br />Massive Urban Tunnel<br />Network Enters Final Phase.
                 </h3>
                 <div className="w-[125px] h-[1.5px] bg-[#D75E1D] origin-left transition-transform duration-500 group-hover:scale-x-110"></div>
@@ -90,7 +90,7 @@ const LatestNews = () => {
           >
             <div className="px-6 flex flex-col gap-[37px]">
               <div className="flex flex-col gap-[14px]">
-                <h3 className="text-[20px] leading-[1.2] tracking-tighter text-[#1b1b1b] font-geom font-normal transition-colors duration-300 group-hover:text-[#9B9C18]">
+                <h3 className="text-[20px] leading-[1.2] tracking-tighter text-[#1b1b1b] font-sans font-normal transition-colors duration-300 group-hover:text-[#9B9C18]">
                   Design Unveiled:<br />New Contemporary Arts<br />Center Breaks Ground.
                 </h3>
                 <div className="w-[125px] h-[1.5px] bg-[#9B9C18] origin-left transition-transform duration-500 group-hover:scale-x-110"></div>

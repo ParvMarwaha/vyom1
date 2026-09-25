@@ -170,8 +170,8 @@ const Services = () => {
                               {service.capabilities.map((cap, idx) => (
                                 <div key={idx} className="flex flex-col">
                                   <div className="flex items-center gap-6 py-2">
-                                    <span className="text-[12px] font-sans opacity-80 w-4">{String(idx + 1).padStart(2, '0')}</span>
-                                    <span className="text-[14px] font-sans">{cap}</span>
+                                    <span className="text-[20px] font-sans opacity-80 w-6">{String(idx + 1).padStart(2, '0')}</span>
+                                    <span className="text-[20px] font-sans">{cap}</span>
                                   </div>
                                   <div className={`w-full h-px ${service.activeLineColor}`}></div>
                                 </div>
@@ -179,7 +179,7 @@ const Services = () => {
                             </div>
                             
                             <div className="mt-12">
-                              <button className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white text-[12px] font-sans tracking-tight transition-transform duration-300 hover:scale-105 hover:shadow-lg" style={{ color: service.bgColor.replace('bg-[', '').replace(']', '') }}>
+                              <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white text-[20px] font-sans tracking-tight transition-transform duration-300 hover:scale-105 hover:shadow-lg" style={{ color: service.bgColor.replace('bg-[', '').replace(']', '') }}>
                                 Explore More
                               </button>
                             </div>

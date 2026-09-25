@@ -37,8 +37,8 @@ const Footer = () => {
           <div className="w-full flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-between gap-8 lg:gap-[119px]">
             
             {/* Quick Links */}
-            <div className="flex flex-col gap-[10px] w-full md:w-auto lg:w-[115px] shrink-0">
-              <h4 className="text-[20px] font-medium text-[#0D1775] tracking-[-1px] uppercase font-geom">
+            <div className="flex flex-col gap-[10px] w-full md:w-auto shrink-0">
+              <h4 className="text-[20px] font-medium text-[#0D1775] tracking-[-1px] uppercase font-geom whitespace-nowrap">
                 QUICK LINKS
               </h4>
               <ul className="flex flex-col gap-[3px]">
@@ -53,8 +53,8 @@ const Footer = () => {
             </div>
 
             {/* Expertise */}
-            <div className="flex flex-col gap-[10px] w-full md:w-auto lg:w-[98px] shrink-0">
-              <h4 className="text-[20px] font-medium text-[#0D1775] tracking-[-1px] uppercase font-geom">
+            <div className="flex flex-col gap-[10px] w-full md:w-auto shrink-0">
+              <h4 className="text-[20px] font-medium text-[#0D1775] tracking-[-1px] uppercase font-geom whitespace-nowrap">
                 EXPERTISE
               </h4>
               <ul className="flex flex-col gap-[3px]">
@@ -69,8 +69,8 @@ const Footer = () => {
             </div>
 
             {/* Media Hub */}
-            <div className="flex flex-col gap-[10px] w-full md:w-auto lg:w-[102px] shrink-0">
-              <h4 className="text-[20px] font-medium text-[#0D1775] tracking-[-1px] uppercase font-geom">
+            <div className="flex flex-col gap-[10px] w-full md:w-auto shrink-0">
+              <h4 className="text-[20px] font-medium text-[#0D1775] tracking-[-1px] uppercase font-geom whitespace-nowrap">
                 MEDIA HUB
               </h4>
               <ul className="flex flex-col gap-[3px]">
