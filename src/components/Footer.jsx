@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="w-full pl-5 pr-5 md:pl-10 md:pr-10 lg:pl-[70px] lg:pr-[87px]">
         
         {/* Top Section */}
-        <div className="flex flex-col lg:flex-row justify-between lg:gap-[119px] mb-16 lg:mb-[89px]">
+        <div className="flex flex-col lg:flex-row justify-between lg:gap-[60px] xl:gap-[119px] mb-16 lg:mb-[89px]">
           
           {/* Left Column - Brand & Socials */}
           <div className="w-full lg:w-[321px] flex flex-col justify-between mb-12 lg:mb-0 shrink-0">
@@ -26,7 +26,7 @@ const Footer = () => {
                 VYOM combines architecture, engineering and delivery expertise to create intelligent solutions for a rapidly evolving world.
               </p>
             </div>
-            <div className="flex items-center gap-6 mt-[114px] lg:mt-auto">
+            <div className="flex items-center gap-6 mt-[114px]">
               <a href="#linkedin" className="hover:opacity-70 transition-opacity">
                 <img src="/images/linkedin.svg" alt="LinkedIn" className="w-[40px] h-[39px]" />
               </a>
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
 
           {/* Right Column - Navigation Links */}
-          <div className="w-full flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-between gap-8 lg:gap-[119px]">
+          <div className="w-full lg:w-auto lg:flex-1 flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-between gap-8 lg:gap-10">
             
             {/* Quick Links */}
             <div className="flex flex-col gap-[10px] w-full md:w-auto shrink-0">
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
 
             {/* Contact Us */}
-            <div className="flex flex-col gap-[10px] w-full md:w-auto lg:w-[243px] shrink-0">
+            <div className="flex flex-col gap-[10px] w-full md:w-[260px] shrink-0">
               <h4 className="text-[20px] font-medium text-[#0D1775] tracking-[-1px] uppercase font-geom">
                 CONTACT US
               </h4>
@@ -112,7 +112,7 @@ const Footer = () => {
           <p className="text-[16px] tracking-[-0.8px] text-black font-sans mb-4 md:mb-0">
             © 2026 VYOM. All rights reserved.
           </p>
-          <div className="flex items-center justify-center md:justify-end lg:justify-start gap-[28px] text-[16px] tracking-[-0.8px] text-black font-sans w-full md:w-auto lg:w-[243px] shrink-0">
+          <div className="flex items-center justify-center md:justify-start gap-[28px] text-[16px] tracking-[-0.8px] text-black font-sans w-full md:w-[260px] shrink-0">
             <a href="#privacy" className="hover:text-[#0D1775] transition-colors whitespace-nowrap">Privacy Policy</a>
             <div className="w-[1px] h-[14px] bg-black shrink-0"></div>
             <a href="#terms" className="hover:text-[#0D1775] transition-colors whitespace-nowrap">Terms of Use</a>
