@@ -48,7 +48,7 @@ const Careers = () => {
 
         {/* Image Container */}
         <motion.div 
-          className="w-full h-[300px] md:h-[380px] rounded-[10px] overflow-hidden relative"
+          className="w-full h-[300px] md:h-[380px] lg:h-[clamp(380px,30vw,550px)] rounded-[10px] overflow-hidden relative"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}

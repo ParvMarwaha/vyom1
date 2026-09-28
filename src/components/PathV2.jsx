@@ -170,7 +170,7 @@ const PathV2 = () => {
                 Added mt-[60px] to manually shift the entire graphic downwards so the top padding feels visually balanced and not stuck to the top.
                 transformOrigin is left at 70px so it remains PERFECTLY left-aligned with the 70px header padding! */}
             <div 
-              className="relative w-[1370px] h-[820px] shrink-0 mt-[60px]"
+              className="relative w-[1370px] h-[820px] shrink-0 mt-[10px]"
               style={{
                 transform: `scale(${scale})`,
                 transformOrigin: '70px center'
@@ -231,10 +231,10 @@ const PathV2 = () => {
                 // Highly optimized coordinates for perfect staggered layout and guaranteed vertical clearances.
                 // Gap between letter and body has been slightly reduced per request.
                 const coords = [
-                  { dot: {x: 403, y: 120}, letter: {x: 513, y: 88}, body: {x: 603, y: 98} }, // P
-                  { dot: {x: 532, y: 290}, letter: {x: 642, y: 258}, body: {x: 732, y: 268} }, // A
-                  { dot: {x: 532, y: 460}, letter: {x: 642, y: 428}, body: {x: 732, y: 438} }, // T
-                  { dot: {x: 403, y: 630}, letter: {x: 513, y: 598}, body: {x: 603, y: 608} } // H
+                  { dot: {x: 403, y: 120}, letter: {x: 513, y: 88}, body: {x: 603, y: 88} }, // P
+                  { dot: {x: 532, y: 290}, letter: {x: 642, y: 258}, body: {x: 732, y: 258} }, // A
+                  { dot: {x: 532, y: 460}, letter: {x: 642, y: 428}, body: {x: 732, y: 428} }, // T
+                  { dot: {x: 403, y: 630}, letter: {x: 513, y: 598}, body: {x: 603, y: 598} } // H
                 ];
                 
                 const pos = coords[index];

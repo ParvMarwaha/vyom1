@@ -20,7 +20,6 @@
   body {
     @apply bg-brand-light text-brand-dark antialiased tracking-tighter font-sans;
     font-size: 20px;
-    zoom: 90%;
   }
   
   button {
