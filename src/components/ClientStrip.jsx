@@ -18,11 +18,11 @@ export default function ClientStrip() {
   const logos = (
     <>
       {clients.map((src, index) => (
-        <div key={index} className="flex items-center justify-center shrink-0 w-[180px] h-[100px]">
+        <div key={index} className="flex items-center justify-center shrink-0 w-[11.25rem] h-[6.25rem]">
           <img 
             src={src} 
             alt={`Client ${index + 1}`} 
-            className="w-auto max-h-[50px] max-w-[150px] object-contain transition-all duration-300 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:scale-105"
+            className="w-auto max-h-[3.125rem] max-w-[9.375rem] object-contain transition-all duration-300 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:scale-105"
           />
         </div>
       ))}

@@ -3,8 +3,8 @@ import BrandHoverButton from './BrandHoverButton';
 
 const Cta = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-[120px]">
-      <div className="w-full px-5 md:px-10 lg:px-[70px]">
+    <section className="w-full bg-white py-16 md:py-[7.5rem]">
+      <div className="w-full px-5 md:px-10 lg:px-[4.375rem]">
         
         {/* Main CTA Container matches Figma proportion */}
         <div className="relative w-full">
@@ -27,17 +27,17 @@ const Cta = () => {
             <div 
               className="relative md:absolute md:left-0 md:bottom-0 w-full md:w-[58.44%] h-auto md:h-[70.646%] bg-[#1e1e1e] flex flex-col justify-center px-6 py-12 md:p-0 md:pl-[5%] md:pr-[7%] z-10"
             >
-              <div className="max-w-[520px]">
-                <h2 className="text-[28px] sm:text-[32px] md:text-[28px] lg:text-[36px] xl:text-[45px] leading-[1.15] text-white font-geom tracking-[-1.35px] mb-4 md:mb-4 xl:mb-[47px]">
-                  Let’s build something<br />
-                  extraordinary together.
+              <div className="max-w-[32.5rem]">
+                <h2 className="text-[1.75rem] sm:text-[2rem] md:text-[1.75rem] lg:text-[2.25rem] xl:text-[2.8125rem] leading-[1.15] text-white font-geom tracking-[-0.0844rem] mb-4 md:mb-4 xl:mb-[2.9375rem]">
+                  The Next Big Possibility<br />
+                  Starts With Us.
                 </h2>
                 
-                <p className="text-[16px] md:text-[20px] leading-[1.45] text-[#ced5db] font-sans tracking-[-0.54px] mb-4 md:mb-6 xl:mb-[58px]">
-                  Have a project in mind? We’d love to hear about it. Let’s collaborate to turn your vision into reality.
+                <p className="text-[1rem] md:text-[1.25rem] leading-[1.45] text-[#ced5db] font-sans tracking-[-0.0338rem] mb-4 md:mb-6 xl:mb-[3.625rem]">
+                  Have a project in mind? Partner with us to create smarter, more resilient spaces and infrastructure that move us forward.
                 </p>
                 
-                <div className="flex flex-wrap items-center gap-[11px]">
+                <div className="flex flex-wrap items-center gap-[0.6875rem]">
                   <BrandHoverButton variant="primary">
                     START A PROJECT
                   </BrandHoverButton>

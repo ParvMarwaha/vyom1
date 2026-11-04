@@ -77,7 +77,7 @@ const Navbar = () => {
   };
 
   const DropdownArrow = () => (
-    <svg className="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="nav-dropdown-arrow" width="9" height="5.4" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
@@ -93,6 +93,7 @@ const Navbar = () => {
         visible: { y: 0, opacity: 1 },
         hidden: { y: -100, opacity: 0 }
       }}
+      initial="hidden"
       animate={isHidden ? "hidden" : "visible"}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
@@ -125,7 +126,7 @@ const Navbar = () => {
           </div>
           
           <div className="nav-item-wrapper" onMouseEnter={() => handleMouseEnter(null)}>
-            <a href="#">MEDIA HUB</a>
+            <a href="#">INSIGHTS</a>
           </div>
         </div>
         
@@ -137,14 +138,14 @@ const Navbar = () => {
             aria-label="Search"
             onClick={() => setIsSearchOpen(true)}
           >
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="15.3" height="15.3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </button>
           
           <BrandHoverButton as="a" href="#" className="get-in-touch-btn !flex" variant="none" colorMode={(isScrolled || isLightMode) ? 'white' : 'original'}>
-            GET IN TOUCH
+            DISCUSS A PROJECT
           </BrandHoverButton>
 
           {/* Hamburger Menu Button */}
@@ -153,7 +154,7 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="21.6" height="21.6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               {isMobileMenuOpen ? (
                 <>
                   <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -176,7 +177,7 @@ const Navbar = () => {
             <motion.div 
               className="mega-menu"
               initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 380, opacity: 1 }}
+              animate={{ height: 342, opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.8, ease: [0.165, 0.84, 0.44, 1] }}
               style={{ overflow: 'hidden' }}
@@ -188,7 +189,7 @@ const Navbar = () => {
                     <li key={idx}>
                       <a href="#">
                         {link}
-                        <svg className="mega-menu-link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="mega-menu-link-arrow" width="10.8" height="10.8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M5 12H19M19 12L12 5M19 12L12 19" />
                         </svg>
                       </a>
@@ -227,7 +228,7 @@ const Navbar = () => {
               <div className="mobile-menu-accordion">
                 <div className="accordion-header" onClick={() => setActiveDropdown(activeDropdown === 'firm' ? null : 'firm')}>
                   <span>OUR FIRM</span>
-                  <svg className={`transition-transform duration-300 ${activeDropdown === 'firm' ? 'rotate-180' : ''}`} width="12" height="8" viewBox="0 0 12 8" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <svg className={`transition-transform duration-300 ${activeDropdown === 'firm' ? 'rotate-180' : ''}`} width="10.8" height="7.2" viewBox="0 0 12 8" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M1 1.5L6 6.5L11 1.5" />
                   </svg>
                 </div>
@@ -247,10 +248,10 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
 
-              <a href="#" onClick={() => setIsMobileMenuOpen(false)}>MEDIA HUB</a>
+              <a href="#" onClick={() => setIsMobileMenuOpen(false)}>INSIGHTS</a>
               
               <BrandHoverButton as="a" href="#" className="mobile-get-in-touch !flex" variant="none" colorMode="white" onClick={() => setIsMobileMenuOpen(false)}>
-                GET IN TOUCH
+                DISCUSS A PROJECT
               </BrandHoverButton>
             </div>
           </motion.div>
@@ -271,7 +272,7 @@ const Navbar = () => {
                 className="absolute top-10 right-10 p-2 text-black hover:opacity-50 transition-opacity"
                 onClick={() => setIsSearchOpen(false)}
               >
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg width="28.8" height="28.8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
                   <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
@@ -281,7 +282,7 @@ const Navbar = () => {
                 <input 
                   type="text" 
                   placeholder="What are you looking for?" 
-                  className="w-full bg-transparent border-b-[2px] border-black/20 text-4xl md:text-6xl font-sans text-black placeholder:text-black/30 pb-4 focus:outline-none focus:border-black transition-colors"
+                  className="w-full bg-transparent border-b-[0.125rem] border-black/20 text-4xl md:text-6xl font-sans text-black placeholder:text-black/30 pb-4 focus:outline-none focus:border-black transition-colors"
                   autoFocus
                 />
                 <p className="mt-6 text-black/50 font-sans tracking-tight">

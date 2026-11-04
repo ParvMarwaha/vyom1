@@ -109,29 +109,29 @@ const ProjectsPage = () => {
   }, [activeCategory]);
 
   return (
-    <div className="w-full min-h-screen bg-white pt-[180px] pb-[100px]">
-      <div className="w-full px-5 md:px-10 lg:px-[70px]">
+    <div className="w-full min-h-screen bg-white pt-[11.25rem] pb-[6.25rem]">
+      <div className="w-full px-5 md:px-10 lg:px-[4.375rem]">
         
         {/* Header Section */}
-        <div className="mb-16 lg:mb-[100px]">
-          <div className="flex items-center gap-[14px] mb-8">
-            <div className="w-[22px] h-[2px] bg-[#6c7280]"></div>
-            <span className="text-[14px] md:text-[16px] font-geom font-normal text-[#6c7280] uppercase tracking-wide">
+        <div className="mb-16 lg:mb-[6.25rem]">
+          <div className="flex items-center gap-[0.875rem] mb-8">
+            <div className="w-[1.375rem] h-[0.125rem] bg-[#6c7280]"></div>
+            <span className="text-[0.875rem] md:text-[1rem] font-geom font-normal text-[#6c7280] uppercase tracking-wide">
               Projects
             </span>
           </div>
-          <h1 className="text-5xl md:text-[72px] font-geom font-normal text-[#10131B] tracking-[-2px] leading-[1.1] max-w-[800px]">
+          <h1 className="text-5xl md:text-[4.5rem] font-geom font-normal text-[#10131B] tracking-[-0.125rem] leading-[1.1] max-w-[50rem]">
             Explore our defining projects and architectural landmarks.
           </h1>
         </div>
 
         {/* Filter Categories */}
-        <div className="flex flex-wrap gap-3 mb-[80px]">
+        <div className="flex flex-wrap gap-3 mb-[5rem]">
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-[24px] py-[10px] rounded-[100px] font-sans text-[16px] tracking-[-0.5px] transition-all duration-300 border ${
+              className={`px-[1.5rem] py-[0.625rem] rounded-[6.25rem] font-sans text-[1rem] tracking-[-0.0312rem] transition-all duration-300 border ${
                 activeCategory === cat 
                   ? 'bg-[#10131B] text-white border-[#10131B]' 
                   : 'bg-transparent text-[#10131B] border-black/10 hover:border-black/40'
@@ -143,7 +143,7 @@ const ProjectsPage = () => {
         </div>
 
         {/* Projects Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[70px]">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[1.875rem] gap-y-[4.375rem]">
           <AnimatePresence>
             {filteredProjects.map((project) => (
               <motion.div
@@ -157,7 +157,7 @@ const ProjectsPage = () => {
                 className="group cursor-pointer flex flex-col"
               >
                 {/* Image Card (Sharp Corners for architectural look) */}
-                <div className="relative w-full aspect-[4/3] overflow-hidden mb-[24px] bg-[#F9F9FD]">
+                <div className="relative w-full aspect-[4/3] overflow-hidden mb-[1.5rem] bg-[#F9F9FD]">
                   <img 
                     src={project.image} 
                     alt={project.title} 
@@ -170,19 +170,19 @@ const ProjectsPage = () => {
 
                 {/* Content */}
                 <div className="flex flex-col">
-                  <div className="flex items-center gap-[12px] mb-[12px]">
-                    <span className="text-[14px] font-medium text-[#0D1775] tracking-[-0.5px]">
+                  <div className="flex items-center gap-[0.75rem] mb-[0.75rem]">
+                    <span className="text-[0.875rem] font-medium text-[#0D1775] tracking-[-0.0312rem]">
                       {project.category}
                     </span>
-                    <span className="w-[4px] h-[4px] rounded-full bg-black/20"></span>
-                    <span className="text-[14px] text-[#6c7280] tracking-[-0.5px]">
+                    <span className="w-[0.25rem] h-[0.25rem] rounded-full bg-black/20"></span>
+                    <span className="text-[0.875rem] text-[#6c7280] tracking-[-0.0312rem]">
                       {project.location}
                     </span>
                   </div>
-                  <h3 className="text-[28px] font-geom font-normal text-[#10131B] tracking-[-1px] mb-[12px] group-hover:text-[#0D1775] transition-colors leading-[1.2]">
+                  <h3 className="text-[1.75rem] font-geom font-normal text-[#10131B] tracking-[-0.0625rem] mb-[0.75rem] group-hover:text-[#0D1775] transition-colors leading-[1.2]">
                     {project.title}
                   </h3>
-                  <p className="text-[16px] text-black/70 tracking-[-0.5px] leading-[1.6]">
+                  <p className="text-[1rem] text-black/70 tracking-[-0.0312rem] leading-[1.6]">
                     {project.description}
                   </p>
                 </div>
@@ -193,9 +193,9 @@ const ProjectsPage = () => {
         
         {/* Empty State */}
         {filteredProjects.length === 0 && (
-          <div className="w-full py-[100px] flex flex-col items-center justify-center text-center">
-            <h3 className="text-[32px] font-geom font-normal text-[#10131B] tracking-[-1px] mb-4">No projects found</h3>
-            <p className="text-[16px] text-[#6c7280] tracking-[-0.5px]">We are currently updating our portfolio for this category.</p>
+          <div className="w-full py-[6.25rem] flex flex-col items-center justify-center text-center">
+            <h3 className="text-[2rem] font-geom font-normal text-[#10131B] tracking-[-0.0625rem] mb-4">No projects found</h3>
+            <p className="text-[1rem] text-[#6c7280] tracking-[-0.0312rem]">We are currently updating our portfolio for this category.</p>
           </div>
         )}
 

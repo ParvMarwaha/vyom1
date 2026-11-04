@@ -5,23 +5,23 @@ import logoWhiteSvg from '../../logos/logowhite.svg';
 const pathCards = [
   {
     letter: 'P',
-    title: 'Purpose - Driven',
-    desc: 'We think beyond the immediate brief, making decisions that create enduring value for our clients, communities, and the environment. By balancing performance, responsibility, and long-term impact, we build with the future in mind.',
+    title: 'Purpose Driven',
+    desc: 'Every project begins with a clear purpose. We align our expertise, decisions and actions with meaningful goals, ensuring every solution responds to real challenges and creates lasting value.',
   },
   {
     letter: 'A',
     title: 'Accountability',
-    desc: 'We take ownership of our decisions and remain invested in every outcome we influence. We recognise our responsibility to our communities, our clients, our people, and our environment, acting with integrity, discipline, and working collaboratively to create lasting value.',
+    desc: 'We stand firmly behind every decision and commitment we make. From early planning to final delivery, we take ownership of challenges, stay accountable for progress, and work with integrity to achieve lasting outcomes our clients and communities can trust.',
   },
   {
     letter: 'T',
     title: 'Transparency',
-    desc: 'We communicate openly and honestly, sharing progress, challenges, decisions, and financial commitments with clarity. By keeping everyone informed, we create alignment, build trust, and enable confident decision-making.',
+    desc: 'Complex projects need clarity. We make processes understandable, communicate decisions openly, and share progress consistently, helping everyone involved move forward with confidence, stronger collaboration, and mutual trust.',
   },
   {
     letter: 'H',
-    title: 'Human - Centricity',
-    desc: 'We believe the best outcomes are created together. By listening deeply, embracing diverse perspectives, and collaborating across departments, we create solutions that are thoughtful, integrated, and centred on the people they serve, creating a lasting positive impact on the lives and communities we touch.',
+    title: 'Human-Centricity',
+    desc: 'Successful spaces do more than fulfil a function. They should make everyday life easier, safer and more meaningful. By understanding the people who use them, we shape environments that balance performance with comfort, support communities, and continue to serve people’s changing needs over time.',
   }
 ];
 
@@ -96,7 +96,7 @@ const PathV2 = () => {
         // as much as needed cohesively on small laptops/tablets.
         if (newScale > 2.2) newScale = 2.2;
         
-        setScale(newScale);
+        setScale(newScale * 0.9);
       } else {
         setScale(1);
       }
@@ -132,48 +132,49 @@ const PathV2 = () => {
         
         {/* TOP SECTION (Normal scroll flow) */}
         {/* Restored to absolute original state to keep alignment exactly as requested */}
-        <div className="w-full px-[70px] pt-[150px] pb-[180px]">
+        <div className="w-full px-[4.375rem] pt-[9.375rem] pb-[11.25rem]">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             {/* LEFT COLUMN: Eyebrow + Heading */}
             <div className="w-full lg:w-[48%] shrink-0 mb-12 lg:mb-0 lg:pr-8">
-              <div className="flex items-center gap-[14px] mb-8">
-                <div className="w-[22px] h-[2px] bg-[#6c7280]"></div>
-                <span className="text-[14px] md:text-[16px] font-geom font-normal text-[#6c7280] uppercase tracking-wide">
+              <div className="flex items-center gap-[0.875rem] mb-8">
+                <div className="w-[1.375rem] h-[0.125rem] bg-[#6c7280]"></div>
+                <span className="text-[0.875rem] md:text-[1rem] font-geom font-normal text-[#6c7280] uppercase tracking-wide">
                   Our Approach
                 </span>
               </div>
-              <h2 className="text-4xl md:text-[48px] lg:text-[52px] leading-[1.1] text-[#10131b] font-geom tracking-[-2px]">
-                A collaborative<br/>approach. Intelligent<br/>outcomes.
+              <h2 className="text-4xl md:text-[3rem] lg:text-[3.25rem] leading-[1.1] text-[#10131b] font-geom tracking-[-0.125rem]">
+                Thoughtful Thinking.<br/>Smarter Solutions.<br/>Lasting Impact.
               </h2>
             </div>
             
-            {/* RIGHT COLUMN: Support Text. Added mt-[56px] to offset the eyebrow height so it centers exactly with the H2 heading */}
-            <div className="w-full lg:w-[48%] shrink-0 lg:mt-[56px]">
-              <p className="text-[18px] md:text-[20px] text-[#10131b] font-sans font-normal leading-[1.45] tracking-[-1px] max-w-[728px] lg:ml-auto">
-                Our approach is built on collaboration, innovation and technical excellence. We integrate design thinking with engineering intelligence and construction expertise to deliver solutions that create lasting impact.
+            {/* RIGHT COLUMN: Support Text. Added mt-[3.5rem] to offset the eyebrow height so it centers exactly with the H2 heading */}
+            <div className="w-full lg:w-[48%] shrink-0 lg:mt-[3.5rem]">
+              <p className="text-[1.125rem] md:text-[1.25rem] text-[#10131b] font-sans font-normal leading-[1.45] tracking-[-0.0625rem] max-w-[45.5rem] lg:ml-auto">
+                Every project is guided by purposeful planning, informed decisions and attention to detail, ensuring efficient processes, reliable outcomes and lasting value. Our approach brings clarity to complexity, helping transform ambitious ideas into practical, future-ready solutions.
               </p>
             </div>
           </div>
         </div>
 
         {/* BOTTOM SECTION (Scroll-jacked interactive path) */}
-        <div ref={containerRef} className="w-full h-[400vh] relative z-10">
+        <div ref={containerRef} className="w-full h-[360vh] relative z-10">
           
           {/* Sticky wrapper with explicit padding from top and bottom so it never sticks to the edges! */}
           <div 
-            className="sticky top-[100px] w-full h-[calc(100vh-200px)] flex items-center justify-start bg-white z-0 rounded-[20px]"
+            className="sticky top-[6.25rem] w-full h-[calc(90vh-12.5rem)] flex items-center justify-start bg-white z-0 rounded-[1.25rem]"
             style={{ overflowX: 'clip', overflowY: 'visible' }}
           >
             
             {/* Layout Container. Fixed to 1370px (exact width of the content) so it perfectly scales to the margin without overflowing!
                 Height increased to 820px to perfectly balance the visual weight so it doesn't look bottom-heavy.
-                Added mt-[60px] to manually shift the entire graphic downwards so the top padding feels visually balanced and not stuck to the top.
+                Added mt-[3.75rem] to manually shift the entire graphic downwards so the top padding feels visually balanced and not stuck to the top.
                 transformOrigin is left at 70px so it remains PERFECTLY left-aligned with the 70px header padding! */}
             <div 
-              className="relative w-[1370px] h-[820px] shrink-0 mt-[10px]"
+              className="relative w-[1370px] h-[820px] shrink-0 mt-[0.625rem]"
               style={{
                 transform: `scale(${scale})`,
-                transformOrigin: '70px center'
+                transformOrigin: '70px center',
+                marginLeft: '-7px'
               }}
             >
               
@@ -275,7 +276,7 @@ const PathV2 = () => {
         </div>
 
         {/* Spacer to ensure generous padding before the next section arrives */}
-        <div className="w-full h-[200px] bg-white relative z-0"></div>
+        <div className="w-full h-[12.5rem] bg-white relative z-0"></div>
       </section>
 
       {/* MOBILE VERSION (Vertical Stack) */}
@@ -283,37 +284,37 @@ const PathV2 = () => {
         
         {/* Header */}
         <div className="mb-16">
-          <div className="flex items-center gap-[14px] mb-8">
-            <div className="w-[22px] h-[2px] bg-[#6c7280]"></div>
-            <span className="text-[16px] font-geom font-normal text-[#6c7280] uppercase tracking-[-1px]">
+          <div className="flex items-center gap-[0.875rem] mb-8">
+            <div className="w-[1.375rem] h-[0.125rem] bg-[#6c7280]"></div>
+            <span className="text-[1rem] font-geom font-normal text-[#6c7280] uppercase tracking-[-0.0625rem]">
               Our Approach
             </span>
           </div>
-          <h2 className="text-4xl leading-[1.1] text-[#10131b] font-geom tracking-[-2px] mb-8">
-            A collaborative approach. Intelligent outcomes.
+          <h2 className="text-4xl leading-[1.1] text-[#10131b] font-geom tracking-[-0.125rem] mb-8">
+            Thoughtful Thinking. Smarter Solutions. Lasting Impact.
           </h2>
-          <p className="text-[18px] text-[#10131b] font-sans font-normal leading-[1.45] tracking-[-1px]">
-            Our approach is built on collaboration, innovation and technical excellence. We integrate design thinking with engineering intelligence and construction expertise to deliver solutions that create lasting impact.
+          <p className="text-[1.125rem] text-[#10131b] font-sans font-normal leading-[1.45] tracking-[-0.0625rem]">
+            Every project is guided by purposeful planning, informed decisions and attention to detail, ensuring efficient processes, reliable outcomes and lasting value. Our approach brings clarity to complexity, helping transform ambitious ideas into practical, future-ready solutions.
           </p>
         </div>
 
         {/* Vertical Timeline Cards */}
         <div className="flex flex-col gap-12 relative pl-2">
           {/* Vertical Track Line */}
-          <div className="absolute left-[26px] top-[24px] bottom-[24px] w-[2px] bg-gray-200"></div>
+          <div className="absolute left-[1.625rem] top-[1.5rem] bottom-[1.5rem] w-[0.125rem] bg-gray-200"></div>
           
           {pathCards.map((card, idx) => (
             <div key={card.letter} className="relative flex gap-6 z-10">
               {/* Timeline Node */}
-              <div className="w-[28px] h-[28px] rounded-full bg-white flex items-center justify-center ring-[3px] ring-white shadow-sm shrink-0 mt-1 relative z-20" style={{ marginLeft: '12px' }}>
-                <div className="w-[14px] h-[14px] rounded-full bg-[#0D1775]"></div>
+              <div className="w-[1.75rem] h-[1.75rem] rounded-full bg-white flex items-center justify-center ring-[0.1875rem] ring-white shadow-sm shrink-0 mt-1 relative z-20" style={{ marginLeft: '12px' }}>
+                <div className="w-[0.875rem] h-[0.875rem] rounded-full bg-[#0D1775]"></div>
               </div>
               
               {/* Card Content */}
               <div className="flex flex-col pt-0">
-                <div className="text-[48px] font-sans font-bold text-[#0D1775] leading-none tracking-[-2px] mb-2">{card.letter}</div>
-                <h3 className="text-[20px] font-bold text-[#0D1775] font-geom tracking-tight mb-2">{card.title}</h3>
-                <p className="text-[16px] text-gray-500 leading-[1.5] font-sans pr-2">{card.desc}</p>
+                <div className="text-[3rem] font-sans font-bold text-[#0D1775] leading-none tracking-[-0.125rem] mb-2">{card.letter}</div>
+                <h3 className="text-[1.25rem] font-bold text-[#0D1775] font-geom tracking-tight mb-2">{card.title}</h3>
+                <p className="text-[1rem] text-gray-500 leading-[1.5] font-sans pr-2">{card.desc}</p>
               </div>
             </div>
           ))}

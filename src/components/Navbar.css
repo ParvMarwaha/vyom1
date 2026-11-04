@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 70px;
-  height: 138px;
+  padding: 0 4.375rem;
+  height: 8.625rem;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
   width: 100%;
   position: fixed;
@@ -18,16 +18,16 @@
 
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(10px);
-  height: 80px;
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(0.625rem);
+  height: 5rem;
 }
 
 .navbar-logo {
   justify-self: start;
   flex-shrink: 0;
-  width: 140px;
-  height: 34px;
+  width: 8.75rem;
+  height: 2.125rem;
 }
 
 .navbar-logo img {
@@ -40,19 +40,19 @@
 .navbar-right-group {
   display: flex;
   align-items: center;
-  gap: 27px;
+  gap: 1.6875rem;
 }
 
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 27px;
+  gap: 1.6875rem;
 }
 
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 27px;
+  gap: 1.6875rem;
 }
 
 .navbar-links a {
@@ -76,15 +76,15 @@
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 2rem;
 }
 
 .search-btn {
   background: none;
   border: none;
   padding: 0;
-  width: 17px;
-  height: 17px;
+  width: 1.0625rem;
+  height: 1.0625rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -111,9 +111,9 @@
 .get-in-touch-btn {
   background-color: #ffffff;
   color: #14171a;
-  padding: 10px 20px;
-  border-radius: 100px;
-  font-size: 16px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 6.25rem;
+  font-size: 16px !important;
   letter-spacing: -0.05em;
   text-decoration: none;
   white-space: nowrap;
@@ -129,7 +129,7 @@
 .get-in-touch-btn:hover {
   opacity: 0.9;
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(30, 23, 99, 0.2);
+  box-shadow: 0 0.25rem 0.75rem rgba(30, 23, 99, 0.2);
 }
 
 /* Light Mode Overrides for pages with white backgrounds */
@@ -148,7 +148,7 @@
 
 /* Dropdown Arrow */
 .nav-dropdown-arrow {
-  margin-left: 8px;
+  margin-left: 0.5rem;
   transition: transform 0.3s ease;
 }
 
@@ -157,8 +157,8 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 20px 0;
-  margin: -20px 0;
+  padding: 1.25rem 0;
+  margin: -1.25rem 0;
   cursor: pointer;
 }
 
@@ -174,36 +174,36 @@
 /* Mega Menu */
 .mega-menu-wrapper {
   position: absolute;
-  top: 100px;
-  left: 70px;
-  right: 70px;
-  padding-top: 15px; 
+  top: 6.25rem;
+  left: 4.375rem;
+  right: 4.375rem;
+  padding-top: 0.9375rem; 
   z-index: 100;
 }
 
 .navbar.scrolled .mega-menu-wrapper {
-  top: 70px;
+  top: 4.375rem;
 }
 
 .mega-menu {
   width: 100%;
   background-color: #ffffff;
-  border: 1px solid #eaeaea;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  border: 0.0625rem solid #eaeaea;
+  box-shadow: 0 0.9375rem 2.5rem rgba(0, 0, 0, 0.12);
   overflow: hidden;
 }
 
 .mega-menu-content {
   display: flex;
   width: 100%;
-  height: 380px;
-  padding: 12px;
+  height: 23.75rem;
+  padding: 0.75rem;
   box-sizing: border-box;
 }
 
 .mega-menu-left {
-  flex: 0 0 280px;
-  padding: 20px 30px;
+  flex: 0 0 17.5rem;
+  padding: 1.25rem 1.875rem;
   background-color: #ffffff;
 }
 
@@ -213,11 +213,11 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .mega-menu-left li a {
-  font-size: 16px;
+  font-size: 1rem;
   color: #757575;
   text-decoration: none;
   display: flex;
@@ -229,7 +229,7 @@
 
 .mega-menu-link-arrow {
   opacity: 0;
-  transform: translateX(-10px);
+  transform: translateX(-0.625rem);
   transition: all 0.3s ease;
   color: #000;
 }
@@ -264,24 +264,24 @@
 
 .mega-menu-caption {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 9px;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  font-size: 0.5625rem;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   color: #ffffff;
   text-transform: uppercase;
   background: rgba(0, 0, 0, 0.4);
-  padding: 6px 10px;
-  backdrop-filter: blur(2px);
+  padding: 0.375rem 0.625rem;
+  backdrop-filter: blur(0.125rem);
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 2.5rem;
   }
   .navbar-links {
     display: none;
@@ -303,45 +303,57 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar {
-    padding: 0 20px;
+    padding: 0 1.25rem;
+  }
+}
+
+/* Small phones: keep logo + search + CTA + hamburger inside the viewport */
+@media (max-width: 480px) {
+  .navbar-right-group,
+  .navbar-actions {
+    gap: 0.625rem;
+  }
+  .get-in-touch-btn {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.75rem !important;
   }
 }
 
 /* Mobile Menu Overlay Styles */
 .mobile-menu-overlay {
   position: fixed;
-  top: 138px;
+  top: 8.625rem;
   left: 0;
   width: 100%;
-  height: calc(100vh - 138px);
+  height: calc(90vh - 8.625rem);
   background-color: #ffffff;
   z-index: 99;
   overflow-y: auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
 }
 
 .navbar.scrolled .mobile-menu-overlay {
-  top: 80px;
-  height: calc(100vh - 80px);
+  top: 5rem;
+  height: calc(90vh - 5rem);
 }
 
 .mobile-menu-links {
   display: flex;
   flex-direction: column;
-  padding: 40px;
-  gap: 24px;
+  padding: 2.5rem;
+  gap: 1.5rem;
 }
 
 .mobile-menu-links > a, .accordion-header {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 12px;
+  border-bottom: 0.0625rem solid #f0f0f0;
+  padding-bottom: 0.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -350,23 +362,23 @@
 .accordion-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px 0 16px 16px;
+  gap: 1rem;
+  padding: 1rem 0 1rem 1rem;
   overflow: hidden;
 }
 
 .accordion-content a {
-  font-size: 16px;
+  font-size: 1rem;
   color: #555555;
   text-decoration: none;
 }
 
 .mobile-get-in-touch {
-  margin-top: 24px;
+  margin-top: 1.5rem;
   background-color: #0D1775;
   color: #ffffff !important;
-  padding: 16px;
-  border-radius: 9999px;
+  padding: 1rem;
+  border-radius: 624.9375rem;
   text-align: center;
   border-bottom: none !important;
 }

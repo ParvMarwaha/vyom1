@@ -12,7 +12,7 @@ const servicesData = [
     number: '01',
     subTitle: 'Adaptive',
     title: 'Architecture',
-    desc: 'Thoughtful spaces shaped by context, purpose and human experience.',
+    desc: 'Creating purposeful spaces where innovation meets everyday functionality.',
     bgColor: 'bg-[#0D1775]', // Deep Navy
     textColor: 'text-white',
     buttonColor: 'bg-[#0D1775]', // Changed from white to blue as per user request
@@ -27,7 +27,7 @@ const servicesData = [
     number: '02',
     subTitle: 'Efficient',
     title: 'Engineering',
-    desc: 'Intelligent systems designed for performance, efficiency and long-term resilience.',
+    desc: 'Solving complex challenges through precision, innovation and technical expertise.',
     bgColor: 'bg-[#D75E1D]', // Terracotta
     textColor: 'text-white',
     buttonColor: 'bg-[#D75E1D]',
@@ -45,7 +45,7 @@ const servicesData = [
     number: '03',
     subTitle: 'Conscious',
     title: 'Construction',
-    desc: 'Precise execution that transforms design intent into enduring built environments.',
+    desc: 'Delivering lasting quality through seamless coordination and disciplined execution.',
     bgColor: 'bg-[#9B9C18]', // Olive
     textColor: 'text-white',
     buttonColor: 'bg-[#9B9C18]',
@@ -64,19 +64,19 @@ const Services = () => {
   // Removed scrollIntoView useEffect as it fights with the height animation and causes jitter.
 
   return (
-    <section className="w-full bg-white py-16 md:py-[120px]">
+    <section className="w-full bg-white py-16 md:py-[7.5rem]">
       <div className="w-full">
         
         {/* Section Header */}
         <motion.div 
-          className="px-5 md:px-10 lg:px-[70px] mb-[69px] flex items-center gap-[14px]"
+          className="px-5 md:px-10 lg:px-[4.375rem] mb-[4.3125rem] flex items-center gap-[0.875rem]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <div className="w-[22px] h-[2px] bg-[#6c7280]"></div>
-          <span className="text-[20px] font-geom font-normal text-[#6c7280] uppercase tracking-[-0.6px]">
+          <div className="w-[1.375rem] h-[0.125rem] bg-[#6c7280]"></div>
+          <span className="text-[1.25rem] font-geom font-normal text-[#6c7280] uppercase tracking-[-0.0375rem]">
             Our Services
           </span>
         </motion.div>
@@ -96,17 +96,17 @@ const Services = () => {
               <div 
                 key={service.id}
                 ref={(el) => (sectionRefs.current[service.id] = el)}
-                className={`group w-full scroll-mt-[120px] transition-colors duration-500 overflow-hidden cursor-pointer ${isActive ? service.bgColor : 'bg-white hover:bg-gray-50'}`}
+                className={`group w-full scroll-mt-[7.5rem] transition-colors duration-500 overflow-hidden cursor-pointer ${isActive ? service.bgColor : 'bg-white hover:bg-gray-50'}`}
                 onClick={() => setActiveId(isActive ? null : service.id)}
               >
-                <div className="w-full px-5 md:px-10 lg:px-[70px] relative">
+                <div className="w-full px-5 md:px-10 lg:px-[4.375rem] relative">
                   
                   {/* Floating Toggle Button */}
                   <div 
-                    className={`absolute right-5 md:right-10 lg:right-[70px] ${isActive ? 'top-[36px]' : 'top-1/2 -translate-y-1/2'} w-[41px] h-[41px] rounded-full flex items-center justify-center shrink-0 transition-all duration-500 z-20 ${isActive ? 'bg-white hover:scale-105' : `${service.buttonColor} group-hover:rotate-90`}`}
+                    className={`absolute right-5 md:right-10 lg:right-[4.375rem] ${isActive ? 'top-[2.25rem]' : 'top-1/2 -translate-y-1/2'} w-[2.5625rem] h-[2.5625rem] rounded-full flex items-center justify-center shrink-0 transition-all duration-500 z-20 ${isActive ? 'bg-white hover:scale-105' : `${service.buttonColor} group-hover:rotate-90`}`}
                     onClick={(e) => { e.stopPropagation(); setActiveId(isActive ? null : service.id); }}
                   >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: isActive ? service.bgColor.replace('bg-[', '').replace(']', '') : '#fff' }}>
+                    <svg width="12.6" height="12.6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: isActive ? service.bgColor.replace('bg-[', '').replace(']', '') : '#fff' }}>
                       {isActive ? (
                         <path strokeLinecap="round" strokeLinejoin="round" d="M20 12H4" />
                       ) : (
@@ -123,17 +123,17 @@ const Services = () => {
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                        className="relative flex items-center justify-between py-[38px] overflow-hidden"
+                        className="relative flex items-center justify-between py-[2.375rem] overflow-hidden"
                       >
-                        <div className="flex items-center gap-6 md:gap-[60px] w-full max-w-[85%] lg:max-w-[50%]">
-                          <span className="text-[20px] tracking-[-1px] text-[#14171a] font-sans font-normal shrink-0">{service.number}</span>
+                        <div className="flex items-center gap-6 md:gap-[3.75rem] w-full max-w-[85%] lg:max-w-[50%]">
+                          <span className="text-[1.25rem] tracking-[-0.0625rem] text-[#14171a] font-sans font-normal shrink-0">{service.number}</span>
                           <div className="flex flex-col items-start w-full">
-                            <span className="text-[20px] tracking-[-1px] font-geom font-normal leading-tight" style={{ color: service.bgColor.replace('bg-[', '').replace(']', '') }}>{service.subTitle}</span>
-                            <h3 className="text-3xl sm:text-4xl md:text-[48px] text-[#1b1b1b] font-sans font-normal tracking-[-2.4px] leading-none shrink-0">{service.title}</h3>
+                            <span className="text-[1.25rem] tracking-[-0.0625rem] font-geom font-normal leading-tight" style={{ color: service.bgColor.replace('bg-[', '').replace(']', '') }}>{service.subTitle}</span>
+                            <h3 className="text-3xl sm:text-4xl md:text-[3rem] text-[#1b1b1b] font-sans font-normal tracking-[-0.15rem] leading-none shrink-0">{service.title}</h3>
                           </div>
                         </div>
-                        <div className="hidden lg:flex items-center pr-[70px] w-full max-w-[450px]">
-                          <p className="text-[20px] tracking-[-1px] text-[#6e6d6a] font-sans font-normal leading-tight">{service.desc}</p>
+                        <div className="hidden lg:flex items-center pr-[4.375rem] w-full max-w-[28.125rem]">
+                          <p className="text-[1.25rem] tracking-[-0.0625rem] text-[#6e6d6a] font-sans font-normal leading-tight">{service.desc}</p>
                         </div>
                       </motion.div>
                     ) : (
@@ -148,19 +148,19 @@ const Services = () => {
                         <div className={`pt-12 pb-16 flex flex-col md:flex-row gap-8 md:gap-12 justify-between ${service.textColor}`}>
                           
                           {/* Left: Title & Desc */}
-                          <div className="flex gap-6 md:gap-[60px] w-full md:w-1/3 shrink-0">
-                            <span className="text-[20px] tracking-[-1px] font-sans font-normal shrink-0">{service.number}</span>
-                            <div className="flex flex-col gap-[38px] pt-1">
+                          <div className="flex gap-6 md:gap-[3.75rem] w-full md:w-1/3 shrink-0">
+                            <span className="text-[1.25rem] tracking-[-0.0625rem] font-sans font-normal shrink-0">{service.number}</span>
+                            <div className="flex flex-col gap-[2.375rem] pt-1">
                               <div className="flex flex-col items-start">
-                                <span className="text-[20px] tracking-[-1px] font-geom font-normal leading-tight opacity-90">{service.subTitle}</span>
-                                <h3 className="text-3xl md:text-[48px] font-sans font-normal tracking-[-2.4px] leading-none">{service.title}</h3>
+                                <span className="text-[1.25rem] tracking-[-0.0625rem] font-geom font-normal leading-tight opacity-90">{service.subTitle}</span>
+                                <h3 className="text-3xl md:text-[3rem] font-sans font-normal tracking-[-0.15rem] leading-none">{service.title}</h3>
                               </div>
-                              <p className="text-[20px] tracking-[-1px] font-sans font-normal max-w-[260px] opacity-90 leading-tight">{service.desc}</p>
+                              <p className="text-[1.25rem] tracking-[-0.0625rem] font-sans font-normal max-w-[16.25rem] opacity-90 leading-tight">{service.desc}</p>
                             </div>
                           </div>
 
                           {/* Center: Image */}
-                          <div className="w-full md:w-1/3 h-[320px] rounded-[10px] overflow-hidden shrink-0">
+                          <div className="w-full md:w-1/3 h-[20rem] rounded-[0.625rem] overflow-hidden shrink-0">
                             <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                           </div>
 
@@ -170,8 +170,8 @@ const Services = () => {
                               {service.capabilities.map((cap, idx) => (
                                 <div key={idx} className="flex flex-col">
                                   <div className="flex items-center gap-6 py-2">
-                                    <span className="text-[20px] font-sans opacity-80 w-6">{String(idx + 1).padStart(2, '0')}</span>
-                                    <span className="text-[20px] font-sans">{cap}</span>
+                                    <span className="text-[1.25rem] font-sans opacity-80 w-6">{String(idx + 1).padStart(2, '0')}</span>
+                                    <span className="text-[1.25rem] font-sans">{cap}</span>
                                   </div>
                                   <div className={`w-full h-px ${service.activeLineColor}`}></div>
                                 </div>
@@ -179,7 +179,7 @@ const Services = () => {
                             </div>
                             
                             <div className="mt-12">
-                              <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white text-[20px] font-sans tracking-tight transition-transform duration-300 hover:scale-105 hover:shadow-lg" style={{ color: service.bgColor.replace('bg-[', '').replace(']', '') }}>
+                              <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white text-[1.25rem] font-sans tracking-tight transition-transform duration-300 hover:scale-105 hover:shadow-lg" style={{ color: service.bgColor.replace('bg-[', '').replace(']', '') }}>
                                 Explore More
                               </button>
                             </div>

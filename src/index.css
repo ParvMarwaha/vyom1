@@ -17,13 +17,17 @@
 }
 
 @layer base {
+  html {
+    font-size: 90%;
+  }
+
   body {
     @apply bg-brand-light text-brand-dark antialiased tracking-tighter font-sans;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   
   button {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -32,5 +36,23 @@
     font-family: 'Geom', sans-serif !important;
     letter-spacing: normal !important;
     font-kerning: none !important;
+  }
+}
+
+/* Static mode (open the site with ?static, or when the OS asks for reduced motion):
+   scroll-reveal elements (framer-motion sets inline opacity:0 + a translate/scale offset)
+   are shown in their final state, so screenshots / design-tool capture see every section.
+   SVG internals are excluded so interactive graphics keep their own state. */
+html.static-mode :not(svg):not(svg *)[style*="opacity: 0"] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+html.static-mode .hero-curtain {
+  display: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  :not(svg):not(svg *)[style*="opacity: 0"] {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

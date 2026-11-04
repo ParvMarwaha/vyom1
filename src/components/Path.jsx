@@ -43,22 +43,22 @@ const Path = () => {
     <section className="w-full bg-white relative">
       
       {/* Container: padding top ensures spacing before scroll starts */}
-      <div className="w-full px-5 md:px-10 lg:px-[70px] pt-20 pb-40">
+      <div className="w-full px-5 md:px-10 lg:px-[4.375rem] pt-20 pb-40">
         
         {/* Desktop Sticky Layout / Mobile Vertical Layout */}
         <div className="flex flex-col lg:flex-row relative">
           
           {/* LEFT SIDE (Sticky on Desktop) */}
-          <div className="w-full lg:w-1/2 lg:sticky lg:top-[20vh] h-fit lg:pr-12 mb-20 lg:mb-0">
+          <div className="w-full lg:w-1/2 lg:sticky lg:top-[18vh] h-fit lg:pr-12 mb-20 lg:mb-0">
             <motion.div 
-              className="flex items-center gap-[14px] mb-8"
+              className="flex items-center gap-[0.875rem] mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="w-[22px] h-[2px] bg-[#6c7280]"></div>
-              <span className="text-[16px] md:text-[20px] font-geom font-normal text-[#6c7280] uppercase tracking-[-1px]">
+              <div className="w-[1.375rem] h-[0.125rem] bg-[#6c7280]"></div>
+              <span className="text-[1rem] md:text-[1.25rem] font-geom font-normal text-[#6c7280] uppercase tracking-[-0.0625rem]">
                 Our Approach
               </span>
             </motion.div>
@@ -70,10 +70,10 @@ const Path = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-4xl md:text-[56px] leading-[1.1] text-black font-geom tracking-[-2.4px] mb-10">
+              <h2 className="text-4xl md:text-[3.5rem] leading-[1.1] text-black font-geom tracking-[-0.15rem] mb-10">
                 A collaborative approach. Intelligent outcomes.
               </h2>
-              <p className="text-[18px] md:text-[20px] text-[#10131b] font-sans font-normal leading-[1.6] tracking-[-0.5px]">
+              <p className="text-[1.125rem] md:text-[1.25rem] text-[#10131b] font-sans font-normal leading-[1.6] tracking-[-0.0312rem]">
                 Our approach is built on collaboration, innovation and technical excellence. We integrate design thinking with engineering intelligence and construction expertise to deliver solutions that create lasting impact.
               </p>
             </motion.div>
@@ -83,10 +83,10 @@ const Path = () => {
           <div className="w-full lg:w-1/2 relative pl-8 lg:pl-12" ref={timelineRef}>
             
             {/* The Vertical Line (sits at left-0 of the Right Column) */}
-            <div className="absolute left-0 top-[14px] bottom-0 w-[2px] bg-gray-200"></div>
+            <div className="absolute left-0 top-[0.875rem] bottom-0 w-[0.125rem] bg-gray-200"></div>
             
             <motion.div 
-              className="hidden lg:block absolute left-0 top-[14px] w-[2px] bg-[#0D1775] origin-top z-10"
+              className="hidden lg:block absolute left-0 top-[0.875rem] w-[0.125rem] bg-[#0D1775] origin-top z-10"
               style={{ height: lineHeight }}
             ></motion.div>
 
@@ -107,9 +107,9 @@ const Path = () => {
                 >
                   
                   {/* Timeline Node (The Blue Dot) - Perfectly aligned to line */}
-                  <div className="absolute -left-[32px] lg:-left-[48px] top-[14px] w-[22px] h-[22px] bg-white transform -translate-x-[10px] z-20 flex items-center justify-center">
+                  <div className="absolute -left-[2rem] lg:-left-[3rem] top-[0.875rem] w-[1.375rem] h-[1.375rem] bg-white transform -translate-x-[0.625rem] z-20 flex items-center justify-center">
                     <motion.div 
-                      className="w-[14px] h-[14px] rounded-full bg-[#0D1775]"
+                      className="w-[0.875rem] h-[0.875rem] rounded-full bg-[#0D1775]"
                       variants={{
                         active: { scale: 1, opacity: 1 },
                         inactive: { scale: 0, opacity: 0 }
@@ -123,7 +123,7 @@ const Path = () => {
                     {/* Letter & Title */}
                     <div className="mb-6">
                       <motion.span 
-                        className="block text-[48px] md:text-[56px] leading-none font-sans font-normal mb-2 relative inline-block"
+                        className="block text-[3rem] md:text-[3.5rem] leading-none font-sans font-normal mb-2 relative inline-block"
                         variants={{
                           active: { color: "#000000" },
                           inactive: { color: "#9CA3AF" }
@@ -132,7 +132,7 @@ const Path = () => {
                       >
                         {card.letter}
                         <motion.div 
-                          className="absolute -bottom-2 left-0 right-0 h-[2px] bg-[#000000]"
+                          className="absolute -bottom-2 left-0 right-0 h-[0.125rem] bg-[#000000]"
                           variants={{
                             active: { opacity: 1, scaleX: 1 },
                             inactive: { opacity: 0.2, scaleX: 0.5 }
@@ -141,7 +141,7 @@ const Path = () => {
                         ></motion.div>
                       </motion.span>
                       <motion.h3 
-                        className="text-[20px] md:text-[24px] font-geom tracking-tight mt-6"
+                        className="text-[1.25rem] md:text-[1.5rem] font-geom tracking-tight mt-6"
                         variants={{
                           active: { color: "#1f2937" }, // gray-800
                           inactive: { color: "#9ca3af" } // gray-400
@@ -153,12 +153,12 @@ const Path = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-[16px] text-gray-500 leading-[1.6] font-sans mb-10">
+                    <p className="text-[1rem] text-gray-500 leading-[1.6] font-sans mb-10">
                       {card.desc}
                     </p>
 
                     {/* Image */}
-                    <div className="w-full aspect-video md:aspect-[4/3] overflow-hidden rounded-[4px] shadow-sm bg-gray-100">
+                    <div className="w-full aspect-video md:aspect-[4/3] overflow-hidden rounded-[0.25rem] shadow-sm bg-gray-100">
                       <motion.img 
                         src={card.imgSrc} 
                         alt={card.title}
