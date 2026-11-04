@@ -33,14 +33,14 @@ const Careers = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h2 className="font-geom font-normal text-4xl md:text-[3rem] text-white tracking-[-0.15rem] leading-tight">
-              Build a Career That Shapes What&rsquo;s Next.
+              Work on Projects<br />That Shape the World.
             </h2>
             <div className="flex flex-col gap-[1.75rem] items-start w-full">
               <p className="font-sans font-normal text-[1.25rem] text-white tracking-[-0.0625rem] leading-[1.45] max-w-[35rem]">
-                Grow alongside passionate professionals, work on challenging projects and develop expertise in an environment that values curiosity and continuous progress.
+                Join a multidisciplinary team working on complex projects across architecture, engineering and construction, where your expertise contributes to real-world solutions and meaningful outcomes.
               </p>
               <BrandHoverButton as="a" href="#" variant="primary" className="!font-normal !px-[1.25rem]">
-                EXPLORE CAREERS
+                JOIN OUR TEAM
               </BrandHoverButton>
             </div>
           </motion.div>

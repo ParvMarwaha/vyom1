@@ -114,7 +114,8 @@
   padding: 0.625rem 1.25rem;
   border-radius: 6.25rem;
   font-size: 16px !important;
-  letter-spacing: -0.05em;
+  font-weight: 400;
+  letter-spacing: -0.0262rem;
   text-decoration: none;
   white-space: nowrap;
   transition: all 0.3s ease;
@@ -374,6 +375,9 @@
 }
 
 .mobile-get-in-touch {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.0262rem !important;
   margin-top: 1.5rem;
   background-color: #0D1775;
   color: #ffffff !important;

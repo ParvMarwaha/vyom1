@@ -179,7 +179,7 @@ const Services = () => {
                             </div>
                             
                             <div className="mt-12">
-                              <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white text-[1.25rem] font-sans tracking-tight transition-transform duration-300 hover:scale-105 hover:shadow-lg" style={{ color: service.bgColor.replace('bg-[', '').replace(']', '') }}>
+                              <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white text-[16px] font-sans font-normal tracking-[-0.0262rem] transition-transform duration-300 hover:scale-105 hover:shadow-lg" style={{ color: service.bgColor.replace('bg-[', '').replace(']', '') }}>
                                 Explore More
                               </button>
                             </div>
