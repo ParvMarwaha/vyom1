@@ -1,9 +1,8 @@
 import React from 'react';
 
 const footerLinks = {
-  quickLinks: ['Home', 'Expertise', 'Projects', 'Media Hub'],
-  expertise: ['Architecture', 'Engineering', 'Construction'],
-  mediaHub: ['Articles', 'Publications', 'Research', 'Awards']
+  quickLinks: ['Home', 'Expertise', 'Projects', 'Insights'],
+  expertise: ['Architecture', 'Engineering', 'Construction']
 };
 
 const Footer = () => {
@@ -34,7 +33,7 @@ const Footer = () => {
           </div>
 
           {/* Right Column - Navigation Links */}
-          <div className="w-full xl:w-auto xl:flex-1 flex flex-col md:flex-row flex-wrap xl:flex-nowrap justify-between gap-8 lg:gap-10">
+          <div className="w-full xl:w-auto xl:flex-1 flex flex-col md:flex-row flex-wrap xl:flex-nowrap justify-start xl:justify-end gap-8 md:gap-x-[7rem]">
             
             {/* Quick Links */}
             <div className="flex flex-col gap-[0.625rem] w-full md:w-auto shrink-0">
@@ -61,22 +60,6 @@ const Footer = () => {
                 {footerLinks.expertise.map((link) => (
                   <li key={link}>
                     <a href={`#${link.toLowerCase()}`} className="text-[1rem] text-black tracking-[-0.05rem] hover:text-[#0D1775] transition-colors font-sans">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Media Hub */}
-            <div className="flex flex-col gap-[0.625rem] w-full md:w-auto shrink-0">
-              <h4 className="text-[1.25rem] font-medium text-[#0D1775] tracking-[-0.0625rem] uppercase font-geom whitespace-nowrap">
-                MEDIA HUB
-              </h4>
-              <ul className="flex flex-col gap-[0.1875rem]">
-                {footerLinks.mediaHub.map((link) => (
-                  <li key={link}>
-                    <a href={`#${link.toLowerCase().replace(' ', '-')}`} className="text-[1rem] text-black tracking-[-0.05rem] hover:text-[#0D1775] transition-colors font-sans">
                       {link}
                     </a>
                   </li>

@@ -34,7 +34,7 @@ const LatestNews = () => {
           
           {/* Card 1 */}
           <motion.div 
-            className="group bg-white rounded-[0.625rem] w-full h-[32.5rem] flex flex-col justify-between pt-[1.75rem] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.15)] cursor-pointer"
+            className="group bg-[#D75E1D] rounded-[0.625rem] w-full h-[32.5rem] flex flex-col justify-between pt-[1.75rem] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.15)] cursor-pointer"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -42,12 +42,12 @@ const LatestNews = () => {
           >
             <div className="px-6 flex flex-col gap-[2.3125rem]">
               <div className="flex flex-col gap-[0.875rem]">
-                <h3 className="text-[1.25rem] leading-[1.2] tracking-tighter text-[#1b1b1b] font-sans font-normal transition-colors duration-300 group-hover:text-[#0D1775]">
+                <h3 className="text-[1.25rem] leading-[1.2] tracking-tighter text-white font-sans font-normal">
                   Sustainable Future:<br />Award-Winning Eco-Tower<br />Design Released.
                 </h3>
-                <div className="w-[7.8125rem] h-[0.0938rem] bg-[#0D1775] origin-left transition-transform duration-500 group-hover:scale-x-110"></div>
+                <div className="w-[7.8125rem] h-[0.0938rem] bg-white origin-left transition-transform duration-500 group-hover:scale-x-110"></div>
               </div>
-              <p className="text-[1.25rem] leading-[1.2] tracking-[-0.0625rem] text-[#1b1b1b] font-sans font-normal">
+              <p className="text-[1.25rem] leading-[1.2] tracking-[-0.0625rem] text-white font-sans font-normal">
                 Construction is progressing steadily, with structural works approaching a major completion milestone.
               </p>
             </div>
@@ -58,7 +58,7 @@ const LatestNews = () => {
 
           {/* Card 2 */}
           <motion.div 
-            className="group bg-white rounded-[0.625rem] w-full h-[32.5rem] flex flex-col justify-between pt-[1.4375rem] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.15)] cursor-pointer"
+            className="group bg-[#0D1775] rounded-[0.625rem] w-full h-[32.5rem] flex flex-col justify-between pt-[1.4375rem] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.15)] cursor-pointer"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -66,12 +66,12 @@ const LatestNews = () => {
           >
             <div className="px-6 flex flex-col gap-[2.3125rem]">
               <div className="flex flex-col gap-[0.875rem]">
-                <h3 className="text-[1.25rem] leading-[1.2] tracking-tighter text-[#1b1b1b] font-sans font-normal transition-colors duration-300 group-hover:text-[#D75E1D]">
+                <h3 className="text-[1.25rem] leading-[1.2] tracking-tighter text-white font-sans font-normal">
                   Infrastructure Focus:<br />Massive Urban Tunnel<br />Network Enters Final Phase.
                 </h3>
-                <div className="w-[7.8125rem] h-[0.0938rem] bg-[#D75E1D] origin-left transition-transform duration-500 group-hover:scale-x-110"></div>
+                <div className="w-[7.8125rem] h-[0.0938rem] bg-white origin-left transition-transform duration-500 group-hover:scale-x-110"></div>
               </div>
-              <p className="text-[1.25rem] leading-[1.2] tracking-[-0.0625rem] text-[#1b1b1b] font-sans font-normal">
+              <p className="text-[1.25rem] leading-[1.2] tracking-[-0.0625rem] text-white font-sans font-normal">
                 A thoughtfully designed residence that balances architectural clarity, material warmth and everyday living.
               </p>
             </div>
@@ -82,7 +82,7 @@ const LatestNews = () => {
 
           {/* Card 3 */}
           <motion.div 
-            className="group bg-white rounded-[0.625rem] w-full h-[32.5rem] flex flex-col justify-between pt-[1.4375rem] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.15)] cursor-pointer"
+            className="group bg-[#9B9C18] rounded-[0.625rem] w-full h-[32.5rem] flex flex-col justify-between pt-[1.4375rem] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.15)] cursor-pointer"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -90,12 +90,12 @@ const LatestNews = () => {
           >
             <div className="px-6 flex flex-col gap-[2.3125rem]">
               <div className="flex flex-col gap-[0.875rem]">
-                <h3 className="text-[1.25rem] leading-[1.2] tracking-tighter text-[#1b1b1b] font-sans font-normal transition-colors duration-300 group-hover:text-[#9B9C18]">
+                <h3 className="text-[1.25rem] leading-[1.2] tracking-tighter text-white font-sans font-normal">
                   Design Unveiled:<br />New Contemporary Arts<br />Center Breaks Ground.
                 </h3>
-                <div className="w-[7.8125rem] h-[0.0938rem] bg-[#9B9C18] origin-left transition-transform duration-500 group-hover:scale-x-110"></div>
+                <div className="w-[7.8125rem] h-[0.0938rem] bg-white origin-left transition-transform duration-500 group-hover:scale-x-110"></div>
               </div>
-              <p className="text-[1.25rem] leading-[1.2] tracking-[-0.0625rem] text-[#1b1b1b] font-sans font-normal">
+              <p className="text-[1.25rem] leading-[1.2] tracking-[-0.0625rem] text-white font-sans font-normal">
                 The project continues to advance on schedule, bringing commercial, workplace and community spaces together.
               </p>
             </div>

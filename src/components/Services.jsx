@@ -13,9 +13,9 @@ const servicesData = [
     subTitle: 'Adaptive',
     title: 'Architecture',
     desc: 'Creating purposeful spaces where innovation meets everyday functionality.',
-    bgColor: 'bg-[#0D1775]', // Deep Navy
+    bgColor: 'bg-[#D75E1D]', // Terracotta
     textColor: 'text-white',
-    buttonColor: 'bg-[#0D1775]', // Changed from white to blue as per user request
+    buttonColor: 'bg-[#D75E1D]', // Changed from white to blue as per user request
     buttonIconColor: 'text-white',
     activeLineColor: 'bg-white/20',
     inactiveLineColor: 'bg-gray-200',
@@ -28,9 +28,9 @@ const servicesData = [
     subTitle: 'Efficient',
     title: 'Engineering',
     desc: 'Solving complex challenges through precision, innovation and technical expertise.',
-    bgColor: 'bg-[#D75E1D]', // Terracotta
+    bgColor: 'bg-[#0D1775]', // Deep Navy
     textColor: 'text-white',
-    buttonColor: 'bg-[#D75E1D]',
+    buttonColor: 'bg-[#0D1775]',
     buttonIconColor: 'text-white',
     activeLineColor: 'bg-white/20',
     inactiveLineColor: 'bg-gray-200',
