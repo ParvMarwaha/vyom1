@@ -39,7 +39,7 @@ const Cta = () => {
                 
                 <div className="flex flex-wrap items-center gap-[0.6875rem]">
                   <BrandHoverButton variant="primary">
-                    START A PROJECT
+                    DISCUSS A PROJECT
                   </BrandHoverButton>
                   <BrandHoverButton variant="secondary">
                     EXPLORE PROJECTS

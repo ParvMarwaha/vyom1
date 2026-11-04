@@ -125,7 +125,7 @@ const Hero = () => {
         <div className="mt-10 md:mt-[3rem] flex flex-col sm:flex-row items-start sm:items-center gap-[0.9375rem]">
           {[
             <BrandHoverButton key="a" as="a" href="#" variant="primary" className="!font-normal !text-[#14171a]">
-              START A PROJECT
+              DISCUSS A PROJECT
             </BrandHoverButton>,
             <BrandHoverButton key="b" as="a" href="#" variant="secondary" className="!font-normal">
               EXPLORE PROJECTS
